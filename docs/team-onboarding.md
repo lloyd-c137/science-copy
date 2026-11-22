@@ -8,6 +8,17 @@
 
 第一次可以从一台试教电脑、一名学生和一名老师开始，用同一个练习课题走完流程。选一个小问题，实际走一遍反馈、修复、发布和复测。
 
+## 有项目问题，先让 AI 查仓库
+
+用自己的 GitHub 账号打开[开题手记仓库](https://github.com/msh-tutor/proposal-coach)。如果打不开，先请项目组确认你的账号有访问权限。能看到仓库后，选一种方式让 Codex 或 WorkBuddy 读到代码和文档。
+
+- **打开本地文件夹。** 在 GitHub 仓库点 `Code → Download ZIP`，下载后解压。在 Codex 或 WorkBuddy 的桌面应用里打开解压后的项目文件夹，选到能看到 `README.md` 的那一层。已经克隆过仓库的话，直接打开现有文件夹。要查新版时，重新下载或更新本地代码。[GitHub 下载说明](https://docs.github.com/en/repositories/working-with-files/using-files/downloading-source-code-archives)
+- **在线连接 GitHub。** 如果你的 Codex 或 ChatGPT 里有 GitHub 插件，从「插件」打开 GitHub 并点「连接」。在跳出的 GitHub 页面登录有权限的账号，授权时选中 `msh-tutor/proposal-coach`。如果页面提示需要组织批准，就按提示申请，也可以先用本地文件夹。在聊天里只需发仓库地址和问题。[OpenAI 连接 GitHub 说明](https://help.openai.com/en/articles/11145903-connecting-github-to-chatgpt)
+
+打开文件夹或连接好 GitHub 后，给 Agent 发一句话试试。
+
+> 请查一下 https://github.com/msh-tutor/proposal-coach 这个项目。先读 README 和相关文档或代码，用简单的话告诉我，学生提交开题计划之后，老师在哪里看到它？请列出你参考的文件。这次只查阅。如果读不到，请告诉我卡在哪一步。
+
 ## 软件开发者
 
 ### 第一次怎么做
