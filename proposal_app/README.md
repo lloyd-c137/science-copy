@@ -14,7 +14,7 @@ python -B -m proposal_app.server --db proposal_app/local_data/demo.sqlite3 --por
 
 Windows 包需在 Windows x64 上以 CPython 3.12 构建，将 Python 一同打包。macOS 包可跨平台构建，使用者需自行安装 Python 3.12 或更新版。两端都需安装并登录 Codex，打开网站的「插件」页按[安装指南](../docs/开题手记-插件安装与使用.md)连接。用 `/api/plugin-downloads` 核对实际提供的版本。
 
-课堂实例使用独立数据库。先按角色创建账号，再用 `--no-demo` 启动，配置校园 HTTPS 入口和对应地址的插件包。
+课堂实例使用独立数据库。先按角色创建账号，再用 `--no-demo` 启动。校内多台电脑共享时，按[局域网试教搭建指南](../docs/lan-https.md)配置 IP、HTTPS 和对应插件包。
 
 ```powershell
 python -B proposal_app/classroom.py --db proposal_app/local_data/classroom.sqlite3 --role teacher --username teacher01 --name 张老师
