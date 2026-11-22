@@ -1,0 +1,13 @@
+{
+  "student": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "prepare_timeout_seconds": 240,
+    "e_draft_timeout_retries": 1
+  },
+  "teacher": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "prepare_timeout_seconds": 240
+  }
+}

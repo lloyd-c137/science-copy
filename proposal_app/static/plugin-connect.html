@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>连接开题手记 · 开题手记</title>
+  <link rel="icon" href="/mark.svg">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/craft.css">
+  <link rel="stylesheet" href="/install-connect.css">
+  <link rel="stylesheet" href="/site-visual.css">
+  <script defer src="/plugin-connect.js"></script>
+</head>
+<body>
+  <header class="site-mast">
+    <a href="/" class="site-brand"><img src="/mark.svg" width="26" height="26" alt="">开题手记</a>
+    <a class="site-back" href="/first-use.html">插件帮助</a>
+  </header>
+  <main class="utility-main compact">
+    <header><h1>连接开题手记</h1></header>
+    <section class="utility-card form-stack" aria-label="连接教学账号">
+      <p id="connection-status" class="utility-status" role="status">正在检查登录状态…</p>
+      <form id="connection-login" class="install-connect" hidden>
+        <label>教学账号<input name="username" required autocomplete="username"></label>
+        <label>密码<input name="password" type="password" required autocomplete="current-password"></label>
+        <button class="primary">登录</button>
+      </form>
+      <div class="actions">
+        <button type="button" class="primary" id="approve-device" hidden>连接这台电脑</button>
+        <button type="button" class="secondary" id="switch-account" hidden>切换教学账号</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>插件 · 开题手记</title>
+  <link rel="icon" href="/mark.svg">
+  <link rel="stylesheet" href="/site-visual.css">
+  <link rel="stylesheet" href="/install-connect.css">
+  <link rel="stylesheet" href="/first-use.css">
+  <script defer src="/plugin-path.js"></script>
+  <script defer src="/install-connect.js"></script>
+</head>
+<body>
+  <header class="site-mast">
+    <a href="/" class="site-brand"><img src="/mark.svg" alt="" width="26" height="26">开题手记</a>
+    <a class="site-back" href="/">返回工作台</a>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="title">
+      <h1 id="title">Research Coach 插件</h1>
+      <div class="download-options" aria-label="按系统下载安装包">
+        <a class="download" data-download="windows" download hidden>下载 Windows 版 <span class="download-version" data-download-version hidden></span><span aria-hidden="true">↓</span></a>
+        <a class="download" data-download="macos" download hidden>下载 macOS 版 <span class="download-version" data-download-version hidden></span><span aria-hidden="true">↓</span></a>
+        <span data-download-status role="status">正在读取安装包…</span>
+      </div>
+      <p class="requirements">先安装并登录 Codex。macOS 版需要 <a href="https://www.python.org/downloads/macos/">Python 3.12 或更新版本</a>。</p>
+    </section>
+
+    <ol class="flow" aria-label="安装和连接步骤">
+      <li class="step">
+        <div class="preview" aria-hidden="true"><span class="mock-file"><b>ZIP</b><i></i><i></i></span></div>
+        <h2>安装插件</h2>
+        <p>解压安装包，打开「安装开题手记」。确认网址后按回车，等窗口显示三位码。</p>
+      </li>
+      <li class="step">
+        <div class="preview" aria-hidden="true"><span class="mock-code"><i>0</i><i>3</i><i>7</i></span></div>
+        <h2>连接账号</h2>
+        <p>回课题页。学生点「跟AI教练开始讨论」，老师点「请 Codex 辅助审阅」。</p>
+        <p class="detail">点「我已有三位连接码」并输码。安装窗口显示完成后再关。</p>
+      </li>
+      <li class="step">
+        <div class="preview" aria-hidden="true"><span class="mock-folder"><i></i><i></i></span></div>
+        <h2>选文件夹</h2>
+        <p>点「选择文件夹」。若 Codex 已打开，先退出，再点「打开 Codex」并发送写好的消息。</p>
+      </li>
+    </ol>
+
+    <section class="reconnect" aria-labelledby="reconnect-title">
+      <div>
+        <h2 id="reconnect-title">连接 Codex</h2>
+        <p>换了电脑、切换账号或连接失效时，重新连接。</p>
+      </div>
+      <button type="button" class="secondary" data-reconnect>重新连接</button>
+    </section>
+    <details class="aftercare">
+      <summary>怎样升级插件？</summary>
+      <p>下载新版，解压后运行「安装开题手记」，再用新三位码重新连接。</p>
+    </details>
+    <dialog class="reconnect-dialog" aria-labelledby="reconnect-heading" data-reconnect-dialog>
+      <div class="dialog-heading">
+        <h2 id="reconnect-heading">重新连接 Codex</h2>
+        <form method="dialog"><button type="submit" class="dialog-close" aria-label="关闭">×</button></form>
+      </div>
+      <p>运行「安装开题手记」，输入安装窗口显示的新三位码。</p>
+      <div data-reconnect-form></div>
+      <a href="/" data-reconnect-return hidden>返回工作台</a>
+    </dialog>
+  </main>
+</body>
+</html>

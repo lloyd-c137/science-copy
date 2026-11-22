@@ -1,0 +1,2 @@
+# Optional PDF text-layer extraction. The app remains usable without this package.
+PyMuPDF>=1.26.0,<2

@@ -1,0 +1,89 @@
+.research-workspace .panel-head{align-items:flex-start;gap:20px}.research-group{border-top:1px solid var(--line,#e7e7eb);padding:18px 0}.research-group>summary{font-weight:650;font-size:17px;cursor:pointer}.research-group>summary span{font-weight:400;color:#777;margin-left:8px}.research-object{padding:22px 0;border-bottom:1px solid #eeeef2}.research-object:last-child{border-bottom:0}.research-object h3{font-size:19px;line-height:1.55;margin:12px 0;overflow-wrap:anywhere}.research-meta{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:#777}.research-meta strong{font-weight:500;color:#9a681b;background:#fff8e6;padding:1px 7px;border-radius:4px}.research-fields{display:block}.research-fields>div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:18px;padding:8px 0}.research-fields dt{font-size:13px;color:#76767c}.research-fields dd{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.7}.research-object .actions{margin-top:14px;flex-wrap:wrap}.research-deliverable{border-bottom:1px solid #eeeef2;padding:20px 0}.research-deliverable>summary{cursor:pointer;font-weight:600}.research-reference-picker{border:1px solid #e7e7ec;border-radius:8px;padding:12px 16px;max-height:280px;overflow:auto}.research-reference-picker .check{align-items:flex-start;padding:7px 0;font-size:14px}.research-refs{font-size:13px;color:#777;padding-left:20px}.research-timeline{border-left:2px solid #e4dff0;margin-left:8px;padding-left:24px}.research-timeline li{padding:7px 0}#sheet blockquote{margin:14px 0;border-left:3px solid #d5c9ec;padding:10px 16px;background:#faf9fc}#sheet blockquote footer{font-size:12px;color:#777;margin-top:8px}@media(max-width:680px){.research-fields>div{grid-template-columns:1fr;gap:4px}.research-workspace .panel-head{flex-direction:column}.research-object h3{font-size:17px}}
+
+.quality-changes[hidden]{display:none}
+
+.research-queue-summary{display:flex;gap:10px;flex-wrap:wrap;font-size:12px;color:#777;margin-top:7px}.research-queue-summary strong{font-weight:500;color:#946415}.research-queue-summary p{flex-basis:100%;margin:0!important;font-size:12px!important;overflow-wrap:anywhere}
+
+.quality-changes:empty{display:none}
+/* Make the student's pending decision the next visible action. */
+.focus-task .actions .review-attention{background:#6151bd;color:#fff;border-color:#6151bd;animation:research-review-breathe 2.4s ease-in-out infinite}
+.research-choice-hint{order:1;flex-basis:100%;margin:4px 0 0;color:#6151bd;font-size:14px;line-height:1.7}
+@keyframes research-review-breathe{0%,100%{box-shadow:0 0 0 0 rgba(97,81,189,.12)}50%{box-shadow:0 0 0 7px rgba(97,81,189,.22)}}
+@media(prefers-reduced-motion:reduce){.focus-task .actions .review-attention{animation:none;box-shadow:0 0 0 3px rgba(97,81,189,.22)}}
+
+/* A reading surface for a decision, rather than a research database form. */
+#sheet:has([data-form="research-stage-review"]){width:min(880px,calc(100vw - 64px));max-height:90svh;border:0;border-radius:20px;background:#fff;color:#29272f;box-shadow:0 24px 100px #211b3d30}
+#sheet:has([data-form="research-stage-review"]) .dialog-inner{padding:0 56px}
+#sheet:has([data-form="research-stage-review"]) .dialog-head{position:sticky;top:0;margin:0;padding:32px 0 24px;background:#fff;border-bottom:1px solid #eeedf1;z-index:3}
+#sheet:has([data-form="research-stage-review"]) .dialog-head h2{font-family:inherit;font-weight:600;font-size:25px;line-height:1.4;letter-spacing:-.5px}
+.stage-review-body{padding:8px 0 24px}
+[data-form="research-stage-review"]{display:flex;flex-direction:column;gap:0;margin:0}
+[data-form="research-stage-review"]>.error:empty{display:none}
+.stage-review-section{position:relative;padding:30px 0;border-bottom:1px solid #eeedf1}
+.stage-review-section:last-child{border:0}
+.stage-review-section h3{font-size:13px;font-weight:600;color:#77727e;letter-spacing:.03em;margin:0 0 18px}
+.stage-review-record{position:relative;padding:0 60px 0 0}
+.stage-review-record+.stage-review-record{margin-top:28px;padding-top:24px;border-top:1px solid #f1f0f3}
+.stage-review-section p{font-size:16px;line-height:1.85;white-space:pre-wrap;overflow-wrap:anywhere;margin:8px 0 0;color:#35313d}
+.stage-review-section .stage-review-lead{font-size:20px;line-height:1.65;font-weight:500;margin:0}
+.stage-review-section h4{font-size:13px;font-weight:500;color:#77727e;margin:22px 0 6px}
+.stage-review-edit{position:absolute;top:0;right:0;font-size:13px;min-height:44px;color:#6151bd}
+.stage-review-record+.stage-review-record>.stage-review-edit{top:20px}
+.stage-review-stage{padding-right:60px}
+.stage-review-stage>.stage-review-edit{top:26px}
+.stage-review-stage h3:not(:first-child){margin-top:28px}
+.stage-review-editor label{display:block;font-size:13px;color:#77727e;margin:0 0 20px}
+.stage-review-editor textarea{display:block;width:100%;min-height:100px;margin-top:10px;border:1px solid #d9d4e5;border-radius:10px;background:#fcfbfe;color:#29272f;font-family:inherit;font-weight:400;font-size:16px;line-height:1.8;padding:14px 16px;resize:vertical}
+.stage-review-editor textarea:focus{outline:2px solid #6151bd;outline-offset:2px}
+.stage-review-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.stage-review-edit-actions{display:flex;gap:16px;align-items:center;margin-top:12px}
+.stage-review-edit-actions button{min-height:40px;font-size:14px}
+.stage-review-footer{position:sticky;bottom:0;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:20px 0 24px;border-top:1px solid #eeedf1;z-index:2;gap:16px}
+.stage-review-footer>.primary{min-height:48px;padding:12px 28px;border-radius:10px;font-size:15px;background:#6151bd;color:#fff;border:1px solid #6151bd}
+.stage-review-stage-label{font-size:12px;color:#928b9b;letter-spacing:.08em}
+.stage-review-blocker{padding:18px 20px;margin:20px 0;background:#faf7ef;border-radius:10px;color:#766344;font-size:14px;line-height:1.7}
+.stage-review-blocker p{margin:0 0 8px}.stage-review-blocker p:last-child{margin:0}
+.stage-review-document h4{font-size:15px;color:#494351;font-weight:600;margin-top:28px}
+.stage-review-document p{font-size:16px}
+.stage-review-copy[hidden],.stage-review-editor[hidden],.stage-review-edit[hidden]{display:none!important}
+@media(max-width:680px){
+ #sheet:has([data-form="research-stage-review"]){width:100vw;max-width:100vw;height:100svh;max-height:100svh;margin:0;border-radius:0}
+ #sheet:has([data-form="research-stage-review"]) .dialog-inner{padding:0 24px;min-height:100%;display:flex;flex-direction:column}
+ [data-form="research-stage-review"]{flex:1}.stage-review-body{flex:1}
+ #sheet:has([data-form="research-stage-review"]) .dialog-head{padding:24px 0 20px}
+ #sheet:has([data-form="research-stage-review"]) .dialog-head h2{font-size:21px}
+ .stage-review-section{padding:26px 0}.stage-review-record{padding-right:0;padding-bottom:42px}
+ .stage-review-edit,.stage-review-record+.stage-review-record>.stage-review-edit{top:auto;bottom:0;right:0}
+ .stage-review-stage{padding-bottom:62px}.stage-review-stage>.stage-review-edit{top:auto;bottom:16px}
+ .stage-review-section .stage-review-lead{font-size:19px}.stage-review-footer{padding-bottom:max(20px,env(safe-area-inset-bottom))}
+}
+
+.student-document {min-width:0}
+.project-page .learning-record {padding:0;background:transparent;border:0}
+.student-document .panel-head {align-items:baseline;gap:12px 24px;flex-wrap:wrap}
+.student-document .panel-head h2 {margin:0}
+.student-reading {max-inline-size:72ch;min-width:0;overflow-wrap:anywhere}
+.student-reading :is(p,li),.plan-chapter p,.defense-reading p {line-height:1.8}
+.student-reading :is(h3,h4),.plan-chapter h4,.defense-reading h4 {line-height:1.5}
+.student-document-summary {padding:18px 22px;margin:16px 0 20px;background:#f4f1fb;border:1px solid #eae4f5;border-radius:12px;color:#342b50}
+.student-document-summary :is(p,h3) {margin:0}
+.student-document-summary h3 {margin:4px 0;font-size:19px;line-height:1.5}
+.submission-caption {color:#4c426e!important;font-weight:600}
+.submission-discussion .text-link {background:transparent;padding-inline:0;text-decoration:underline;text-underline-offset:4px}
+.research-overview {margin:8px 0 28px}
+.research-overview section,.learning-phase,.material-entry,.plan-chapter,.defense-reading {padding:17px 0;border-bottom:1px solid var(--line,#e7e7eb)}
+.research-overview section:last-child,.learning-phase:last-child,.material-entry:last-child,.plan-chapter:last-child {border-bottom:0}
+.research-overview h3,.learning-phase h3,.material-entry h3,.plan-chapter h4,.defense-reading h3 {margin:0 0 8px;font-size:18px}
+.research-overview p,.material-entry p,.plan-chapter p {margin:6px 0}
+.research-group .research-object {padding:12px 0}
+.research-group .research-meta {margin-top:12px}
+.document-outline {display:flex;flex-wrap:wrap;gap:4px 14px;color:#5f576c;font-size:13px;margin:0 0 14px}
+.student-document .discussion-thread {margin:8px 0 0}
+.learning-phase .discussion-messages {margin-top:16px}
+.material-entry .source-limit {margin-top:12px;padding:8px 0 0}
+.version-list {padding:0;list-style:none}
+.version-list li {display:flex;align-items:baseline;gap:8px 14px;flex-wrap:wrap;padding:4px 0;border-bottom:1px solid var(--line,#e7e7eb)}
+.version-list li button {margin-inline-start:auto}
+.stage-review-body>.fold,.stage-review-body .plan-chapter {scroll-margin-top:96px}
+.project-context h1,.project-branch>summary span {overflow-wrap:anywhere}
+@media(max-width:680px){.student-document-summary{padding:14px 16px}.student-reading{max-inline-size:100%}.student-document .panel-head{align-items:flex-start}}

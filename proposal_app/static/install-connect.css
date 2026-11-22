@@ -1,0 +1,37 @@
+.install-connect { display: grid; gap: 12px; }
+.install-connect p { margin: 0; }
+.install-connect label { display: grid; gap: 7px; font-weight: 600; }
+.install-connect input { max-width: 230px; min-height: 48px; padding: 10px 14px; background: #fff; border: 1px solid #d8d5e3; border-radius: 9px; color: #292a30; font: inherit; }
+.install-connect input::placeholder { color: #777880; font-weight: 400; }
+.install-connect button { justify-self: start; }
+.install-status, .install-connect [data-install-account] { color: #615a72; font-size: .9rem; }
+.install-status[data-state="error"] { color: var(--danger); }
+.install-status[data-state="success"] { color: var(--success); }
+.coach-wizard-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; list-style: none; padding: 0; margin: 8px 0 22px; }
+.coach-wizard-steps li { display: flex; align-items: center; justify-content: center; gap: 6px; padding: 7px 4px; border: 1px solid #e6e2ef; border-radius: 10px; color: #5d5769; font-size: .83rem; white-space: nowrap; }
+.coach-step-number { display: grid; place-items: center; width: 20px; height: 20px; flex: 0 0 20px; border-radius: 50%; background: #edeaf2; font-size: .78rem; }
+.coach-wizard-steps [aria-current="step"] { color: #47369a; background: #f0ecff; border-color: #d8cff7; font-weight: 700; }
+.coach-wizard-steps [aria-current="step"] .coach-step-number { color: #fff; background: #5b49b5; }
+.coach-wizard-steps .complete .coach-step-number { color: #236447; background: #e1f2e9; }
+.coach-wizard-card { padding: 16px; border: 1px solid #e6e2ef; border-radius: 14px; background: #faf9fd; }
+.coach-wizard-card h3 { margin: 0 0 10px; font-size: 1.1rem; }
+.coach-wizard-card > p { margin: 10px 0; }
+.coach-downloads, .coach-wizard-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.coach-download { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 7px 12px; border-radius: 8px; border: 1px solid #e1d9f5; color: #4c3a9b; text-decoration: none; }
+.coach-download:hover, .coach-wizard-help summary:hover { text-decoration: underline; }
+.coach-download-primary { background: #efeaff; font-weight: 700; }
+.coach-wizard-help { margin-top: 10px; color: #5d5769; font-size: .9rem; }
+.coach-wizard-help summary { cursor: pointer; }
+.coach-wizard-help p { margin: 5px 0 0; }
+.coach-wizard-actions { margin-top: 16px; }
+.coach-folder-actions { margin: 10px 0 14px; }
+[data-pilot-status]:empty, #pilot-path-error:empty { display: none; }
+.coach-wizard-note { margin: 0 0 14px; padding: 10px 12px; border-radius: 8px; background: #eaf5ef; color: #244f3c; }
+@media (max-width: 400px) {
+  .coach-wizard-steps { gap: 4px; }
+  .coach-wizard-steps li { gap: 4px; font-size: .74rem; }
+  .coach-step-number { width: 15px; height: 15px; flex-basis: 15px; font-size: .68rem; }
+}
+.install-connect button:disabled {
+  border-color: #e2e1e8; background: #e2e1e8; color: #575563; cursor: not-allowed; box-shadow: none; opacity: 1;
+}

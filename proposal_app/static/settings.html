@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>系统设置 · 开题手记</title>
+  <link rel="icon" href="/mark.svg">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/craft.css">
+  <link rel="stylesheet" href="/install-connect.css">
+  <link rel="stylesheet" href="/site-visual.css">
+  <script defer src="/settings.js"></script>
+</head>
+<body>
+  <header class="site-mast">
+    <a href="/" class="site-brand"><img src="/mark.svg" width="26" height="26" alt="">开题手记</a>
+    <a class="site-back" href="/">返回工作台</a>
+  </header>
+  <main class="utility-main">
+    <header>
+      <h1>系统设置</h1>
+      <p>学生讨论和老师辅助审阅使用同一套默认设置。</p>
+    </header>
+    <form id="settings" class="utility-card form-stack" aria-labelledby="settings-title">
+      <h2 id="settings-title">默认模型</h2>
+      <fieldset disabled id="fields" aria-label="模型设置">
+        <div class="utility-form-grid">
+          <label>模型名称<input name="model" required maxlength="120" list="models" autocomplete="off" aria-describedby="model-help"></label>
+          <datalist id="models"><option value="gpt-6.1-sol"></option></datalist>
+          <label>推理强度<select name="reasoning_effort">
+            <option value="none">无（none）</option>
+            <option value="minimal">最低（minimal）</option>
+            <option value="low">轻度（low）</option>
+            <option value="medium">中等（medium）</option>
+            <option value="high">高（high）</option>
+            <option value="xhigh">更高（xhigh）</option>
+            <option value="max">最大（max）</option>
+            <option value="ultra">极高（ultra）</option>
+          </select></label>
+        </div>
+        <p id="model-help" class="hint" hidden>填写 Codex 账号支持的模型。推理越深入，通常等待越久。</p>
+        <button class="primary" type="submit" hidden>保存设置</button>
+      </fieldset>
+      <p id="status" class="utility-status" role="status">正在读取设置…</p>
+    </form>
+    <p class="utility-note">设置用于新任务和新聊天。插件同步后，请退出并重开 Codex。</p>
+  </main>
+</body>
+</html>
