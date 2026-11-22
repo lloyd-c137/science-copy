@@ -9,7 +9,7 @@
 >
 > **学生反馈者**「我想用学生账号试一遍开题手记。请带我找到入口。遇到问题后，帮我把操作和现象整理成一条 Issue。」
 >
-> **老师反馈者**「我想调整 AI 教练在这一步的问法。请帮我找到对应的 Skill，按我的教学意图改一版，再帮我准备提交到 GitHub。」
+> **老师反馈者**「我想调整 AI 教练在这一步的问法。请帮我找到对应的 Skill，按我的教学意图改一版。我确认后，用我的 GitHub 账号开分支、提交修改并发 PR。」
 >
 > 第一次用 AI 读这个项目，先看[怎么让 AI 查仓库](#有项目问题先让-ai-查仓库)。
 
@@ -84,10 +84,11 @@
 
 Skill 是写给 AI 的工作说明，告诉它怎么辅导学生或辅助老师审阅。老师负责把教学要求写进仓库，也负责确认改完后 AI 的表现是否符合预期。
 
-1. 找到要改的入口。学生怎么被引导、AI 什么时候追问，改[学生辅导 Skill](../skills/research-proposal-coach/SKILL.md)。老师如何请 AI 看稿、给出审阅建议，改[老师审阅 Skill](../skills/research-proposal-review/SKILL.md)。具体规则也可能写在各自的 `references/` 里。
-2. 拿一段试教中的实际表现作为例子，写清楚 AI 现在怎么做、希望它改成怎么做。可以请 Codex 或 WorkBuddy 帮你改文档，由你确认教学用语和要求。
-3. 把修改提交到 GitHub 分支并开 PR，请同伴检查后合并。只有读取权限时，可以把改稿和例子放到对应 Issue，请开发者代提 PR，老师确认最终文字。
-4. 合并后把 PR 和要复测的例子交给部署者。收到新版通知，就从试教站下载并安装，用同一个例子再试一次，把结果和插件版本写回 Issue。
+1. 第一次接手时，请仓库管理员在 [proposal-coach 的访问设置](https://github.com/msh-tutor/proposal-coach/settings/access)给你的 GitHub 账号添加 **Write** 权限。学生体验和提交 Issue 用 **Read** 就够。
+2. 找到要改的入口。学生怎么被引导、AI 什么时候追问，改[学生辅导 Skill](../skills/research-proposal-coach/SKILL.md)。老师如何请 AI 看稿、给出审阅建议，改[老师审阅 Skill](../skills/research-proposal-review/SKILL.md)。具体规则也可能写在各自的 `references/` 里。
+3. 拿一段试教中的实际表现作为例子，写清楚 AI 现在怎么做、希望它改成怎么做。可以请 Codex 或 WorkBuddy 帮你改文档，由你确认教学用语和要求。
+4. 用自己的 GitHub 账号开分支、提交并推送修改，然后发 PR，请同伴检查后合并。这些操作也可以请 Codex 或 WorkBuddy 用你的账号帮忙完成。
+5. 合并后把 PR 和要复测的例子交给部署者。收到新版通知，就从试教站下载并安装，用同一个例子再试一次，把结果和插件版本写回 Issue。
 
 ### 每轮怎么交接
 
